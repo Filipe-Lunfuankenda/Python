@@ -1,6 +1,6 @@
 
 nome = str(input("Digite o seu nome :"))
-curso = str(input("Digite o nome do seu curso:"))
+content = str(input("Digite o que está a pensar: "))
 
 def criarArquivo () :
     arquivo = open("dados.txt","w")
@@ -8,7 +8,7 @@ def criarArquivo () :
 def escreverArquivo () :
     arquivo = open("dados.txt","a")
     arquivo.write(nome.upper() + "\n")
-    arquivo.write(curso.upper() + "\n")
+    arquivo.write(content.upper() + "\n")
     arquivo.close()
 
 criarArquivo()
