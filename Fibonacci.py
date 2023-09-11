@@ -2,7 +2,7 @@
 print("-"*60)
 print(" "*16,"Sequência de Fibonacci")
 print("-"*60)
-n = int(input("Quantos termos queres mostrar? :"))
+n = int(input("Quantos termos queres mostrar? : "))
 t1 = 0
 t2 = 1
 print("~"*60)
