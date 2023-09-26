@@ -1,11 +1,11 @@
 
-nome = str(input("Digite o seu nome :"))
-content = str(input("Digite o que está a pensar: "))
+nome = str(input("Digite o seu nome: "))
+content = str(input("Digite o que está a pensar:\n"))
 
-def criarArquivo () :
+def criarArquivo ():
     arquivo = open("dados.txt","w")
     arquivo.close()
-def escreverArquivo () :
+def escreverArquivo ():
     arquivo = open("dados.txt","a")
     arquivo.write(nome.upper() + "\n")
     arquivo.write(content.upper() + "\n")
