@@ -49,6 +49,6 @@ while True:
             if encrypted_file_path:
                 sg.popup(f'Arquivo criptografado com sucesso: {encrypted_file_path}. A palavra-passe foi {password}')
             else:
-                sg.popup('Erro ao criptografar o arquivo! Certifique-se de que o arquivo existe e a senha é válida.')
+                sg.popup('Erro ao criptografar o arquivo! Certifique-se de que o arquivo existe e a senha é válida!')
 
 window.close()
