@@ -1,4 +1,4 @@
-#Encriptar qualquer arquivo selecionado usando a Linguagem Python com as bibliotecas criptography, PySimpleGUI e os
+#Encriptar/Criptografar qualquer arquivo selecionado usando a Linguagem Python com as bibliotecas criptography, PySimpleGUI e os
 import PySimpleGUI as sg
 from cryptography.fernet import Fernet
 import os
