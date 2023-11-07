@@ -1,4 +1,4 @@
-
+#Generate a text file
 nome = str(input("Digite o seu nome: "))
 content = str(input("Digite o que está a pensar:\n"))
 
