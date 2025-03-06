@@ -1,13 +1,64 @@
+"""
+Gerenciador de Perfis
+
+Este programa permite a introdução, modificação e listagem de perfis de pessoas. Cada perfil contém as seguintes informações:
+- Nome (máximo de 50 letras)
+- Peso (em kg, entre 6 e 200)
+- Altura (em cm, entre 50 e 250)
+- Idade (em anos, entre 1 e 120)
+- Sexo (M ou F)
+
+O programa oferece um menu principal com as seguintes opções:
+1. Introduzir Perfil: Permite adicionar um novo perfil.
+2. Modificar Perfil: Permite modificar um perfil existente.
+3. Listar Perfis: Exibe todos os perfis introduzidos e permite salvar os dados em um arquivo (formato txt ou csv).
+0. Sair do Programa: Encerra o programa.
+
+Funções principais:
+- menu(): Exibe o menu principal e retorna a escolha do usuário.
+- introduzirNome(index): Solicita e armazena o nome de um perfil.
+- introduzirPeso(index): Solicita e armazena o peso de um perfil.
+- introduzirAltura(index): Solicita e armazena a altura de um perfil.
+- introduzirIdade(index): Solicita e armazena a idade de um perfil.
+- introduzirSexo(index): Solicita e armazena o sexo de um perfil.
+- menu2(totalPerfis): Exibe o menu de modificação de perfis e retorna a escolha do usuário.
+- menu3(index): Exibe o menu de modificação de um perfil específico e retorna a escolha do usuário.
+- calculaTMB(index): Calcula a Taxa Metabólica Basal (TMB) de um perfil com base no peso, altura, idade e sexo.
+- salvar_perfis(formato, contadorPerfis): Salva os perfis em um arquivo no formato especificado (txt ou csv).
+- main(): Função principal que controla o fluxo do programa.
+
+Constantes:
+- MAXNOMES: Número máximo de perfis (10).
+- MAXLETRAS: Número máximo de letras para cada nome (50).
+
+Variáveis globais:
+- nome: Lista 2D para armazenar os nomes dos perfis.
+- peso: Lista para armazenar os pesos dos perfis.
+- altura: Lista para armazenar as alturas dos perfis.
+- idade: Lista para armazenar as idades dos perfis.
+- sexo: Lista para armazenar os sexos dos perfis.
+"""
+
 # Definições de constantes
 MAXNOMES = 10  # máximo de 10 nomes
 MAXLETRAS = 50  # máximo de 50 letras para cada nome
 
 # Declaração das variáveis ​​globais do programa, acessíveis por qualquer função do programa
-nome = [[""] * MAXLETRAS for _ in range(MAXNOMES)]  # vetor 'nome' multidimensional (2D) de 10 x 50 elementos do tipo char, usado para salvar 10 nomes de 50 letras cada
-peso = [0] * MAXNOMES  # vetor 'peso' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar o peso de cada perfil
-altura = [0] * MAXNOMES  # vetor 'altura' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar a altura de cada perfil
-idade = [0] * MAXNOMES  # vetor 'idade' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar a idade de cada perfil
-sexo = [""] * MAXNOMES  # vetor 'sexo' unidimensional (1D) de 10 elementos do tipo char, usado para salvar o sexo de cada perfil
+
+# vetor 'nome' multidimensional (2D) de 10 x 50 elementos do tipo char, usado para salvar 10 nomes de 50 letras cada
+nome = [[""] * MAXLETRAS for _ in range(MAXNOMES)]
+
+# vetor 'peso' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar o peso de cada perfil
+peso = [0] * MAXNOMES
+
+# vetor 'altura' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar a altura de cada perfil
+altura = [0] * MAXNOMES
+
+# vetor 'idade' unidimensional (1D) de 10 elementos do tipo inteiro, usado para salvar a idade de cada perfil
+idade = [0] * MAXNOMES
+
+# vetor 'sexo' unidimensional (1D) de 10 elementos do tipo char, usado para salvar o sexo de cada perfil
+sexo = [""] * MAXNOMES
 
 def menu():
     while True:
