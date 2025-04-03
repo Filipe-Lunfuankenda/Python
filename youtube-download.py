@@ -10,12 +10,11 @@ Funções:
     - Comportamento:
         - Configura as opções do `yt_dlp` para baixar apenas o melhor vídeo com altura máxima de 1080p.
         - Garante que apenas um vídeo seja baixado (sem playlists).
-        - Define o caminho de saída do arquivo como `C:\Users\HP\Videos\` com o título do vídeo como nome do arquivo.
         - Utiliza o `yt_dlp.YoutubeDL` para realizar o download.
 
 Execução:
 ---------
-- Quando o script é executado diretamente, solicita ao usuário o link do vídeo do YouTube.
+- Quando o script é executado diretamente, solicita ao utilizador o link do vídeo do YouTube.
 - Chama a função `download_youtube_video` para baixar o vídeo.
 - Exibe uma mensagem de confirmação após o download ser concluído.
 
@@ -31,7 +30,7 @@ Exemplo de uso:
     Por exemplo: `https://youtu.be/QGv2v2Ps_fk`
 3. O script irá baixar o vídeo na melhor qualidade disponível (até 1080p) e salvá-lo na pasta especificada.
 4. O nome do arquivo será o título do vídeo, com a extensão apropriada.
-3. O vídeo será baixado na pasta `C:\Users\HP\Videos\` com o título do vídeo como nome do arquivo.
+3. O vídeo será baixado com o título do vídeo como nome do arquivo.
 
 Nota:
 -----
@@ -46,7 +45,6 @@ def download_youtube_video(url):
         'format': 'bestvideo[height<=1080]',
         'noplaylist': True,
     }
-    ydl_opts['outtmpl'] = r'C:\Users\HP\Videos\%(title)s.%(ext)s'
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
 
